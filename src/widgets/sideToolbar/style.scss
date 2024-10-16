@@ -1,0 +1,45 @@
+@import 'src/shared/const/variables';
+
+.side {
+  position: relative;
+  background-color: #f0f0f0;
+  min-height: 100%;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  min-width: $sidebar-width;
+  width: $sidebar-width;
+  transition: all 200ms;
+  overflow: hidden;
+
+  &_compressed {
+    min-width: $sidebar-width-compressed !important;
+    width: $sidebar-width-compressed !important;
+  }
+
+  &__menu {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(100% - 37px);
+    padding: 6px 8px;
+  }
+
+  &__toggle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 37px;
+    padding: 6px 8px;
+    cursor: pointer;
+    user-select: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      background-color: #dfdfdf;
+    }
+  }
+}

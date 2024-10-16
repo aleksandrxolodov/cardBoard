@@ -1,0 +1,6 @@
+$sidebar-width: 225px;
+$sidebar-width-compressed: 57px;
+$view-padding: 24px;
+$card-width: calc((100vw - $sidebar-width) / 3 - 48px - 12px);
+$card-width-tablet: calc((100vw - $sidebar-width-compressed) / 3 - 48px - 12px);
+$card-width-mobile: calc((100vw - $sidebar-width-compressed) * 0.75);

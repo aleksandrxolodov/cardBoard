@@ -1,0 +1,107 @@
+@import 'src/shared/const/variables';
+
+.card {
+  width: $card-width;
+  height: $card-width;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  background-color: #f6f6f6;
+
+  &__actions {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__header {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+  }
+
+  &__title {
+    padding: 12px 0;
+    font-weight: 500;
+    line-height: 20px;
+    font-size: 20px;
+  }
+
+  &__description {
+    :deep textarea {
+      height: calc($card-width - 24px - 44px - 4px);
+      -webkit-mask-image: none;
+      mask-image: none;
+
+      &::-webkit-scrollbar {
+        background-color: rgba(0, 0, 0, 0.1);
+        width: 6px;
+        height: 6px;
+
+        &-button {
+          display: none;
+        }
+
+        &-thumb {
+          background-color: rgba(0, 0, 0, 0.1);
+          border-radius: 5px;
+
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
+    }
+    :deep .v-field__outline::before,
+    :deep .v-field__outline::after {
+      border: none;
+    }
+  }
+
+  &__content {
+    background-color: #ebebeb;
+    margin: 12px;
+    height: calc(100% - 44px - 24px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      background-color: rgba(0, 0, 0, 0.1);
+      width: 6px;
+      height: 6px;
+
+      &-button {
+        display: none;
+      }
+
+      &-thumb {
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+
+  &_mobile {
+    width: $card-width-mobile;
+    height: $card-width-mobile;
+
+    :deep textarea {
+      height: calc($card-width-mobile - 24px - 44px - 4px) !important;
+    }
+  }
+
+  &_tablet {
+    width: $card-width-tablet;
+    height: $card-width-tablet;
+
+    :deep textarea {
+      height: calc($card-width-tablet - 24px - 44px - 4px) !important;
+    }
+  }
+}

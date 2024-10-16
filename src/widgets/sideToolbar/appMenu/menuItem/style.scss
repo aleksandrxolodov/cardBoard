@@ -1,0 +1,45 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 40px;
+    gap: 11px;
+    padding: 8px 8px 8px 11px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    user-select: none;
+
+    &-icon {
+      width: 18px;
+    }
+
+    &-name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &:hover {
+      background-color: #dfdfdf;
+    }
+  }
+
+  &_lightweight {
+    .menu__item {
+      justify-content: center;
+      padding-right: 11px;
+
+      &-name {
+        display: none;
+      }
+    }
+  }
+}
